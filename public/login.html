@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gem Research Center</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    montserrat: ['Montserrat', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        blue: '#204d95',
+                        yellow: '#ffcd00',
+                        red: '#bd1e2d',
+                        green: '#03ac0e',
+                        // ---------------------------------
+                        verylight_gray: '#94a1b2',
+                        light_gray: '#242629',
+                        dark_gray: '#16161a',
+                        light_green: '#2cb67d',
+                        purple: '#7f5af0'
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-montserrat">
+
+    <section>
+
+        <div class="h-screen grid lg:grid-cols-2 grid-cols-1">
+            <div class="hidden lg:block bg-cover bg-center bg-no-repeat" style="background-image: url(../Assets/Images/Optimize/background-permata-2.jpg);">
+                <div class="relative h-full bg-black/90">
+                    <div class="absolute inset-0 mx-20 my-10">
+                        <div class="relative h-full">
+                            <div class="cursor-pointer absolute top-0"><img class="cursor-pointer" src="../Assets/Images/Logo/logo-full.png" alt=""></div>
+                            <div class="absolute inset-0">
+                                <div class="flex h-full items-center">
+                                    <div>
+                                        <span class="text-xl font-semibold text-light_green tracking-[10px]">INFORMASI</span>
+                                        <h1 class="text-5xl font-bold text-white my-3">GEM RESEARCH CENTER</h1>
+                                        <div class="mt-4 text-lg text-white/40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem esse aliquid voluptate fuga fugit maiores quia, placeat quasi, hic veniam sequi fugiat consectetur. Veritatis quaerat labore ea officiis error maxime!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 w-full">
+                                <div class="text-white/40 flex justify-between">
+                                    <div class="cursor-pointer">@ 2023 Gem Research Center</div>
+                                    <div class="flex gap-3">
+                                        <div class="cursor-pointer">Privacy</div>
+                                        <div class="cursor-pointer">Legal</div>
+                                        <div class="cursor-pointer">Contact</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-full flex justify-center items-center bg-dark_gray overflow-hidden">
+                <div class="absolute opacity-20 -top-[450px] -left-48"><img class="h-[900px]" src="../Assets/Images/Optimize/decorate-diamond.png" alt=""></div>
+                <div class="absolute opacity-20 rotate-180 -bottom-[450px] -right-48"><img class="h-[900px]" src="../Assets/Images/Optimize/decorate-diamond.png" alt=""></div>
+                <div class="bg-white px-10 py-5 w-[400px] z-10 shadow-xl">
+                    <div class="flex justify-center items-center font-bold text-3xl mt-5 w-full">LOGIN</div>
+                    <div class="my-5">
+                        <form action="/login" method="post">
+                            <div class="mb-16">
+                                <div>
+                                    <input class="w-full border-b-2  focus:outline-none py-3" type="text" name="username" required placeholder="Your Email">
+                                </div>
+                                <div>
+                                    <input class="w-full border-b-2 focus:outline-none py-3" type="password" name="password" required placeholder="Your Password">
+                                </div>
+                                <div class="flex my-3">
+                                    <input type="checkbox" name="ingataku" value="1" id="remember_me">
+                                    <label class="ml-2" for="remember_me">Remember Me</label>
+                                </div>
+                            </div>
+                            <button class="w-full bg-dark_gray py-2 mt-5 text-white" name="login" value="login">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

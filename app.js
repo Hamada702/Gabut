@@ -7,11 +7,15 @@ const app = express();
 
 app.use(bodyParser.urlencoded()); // body parser sebagai urlencoded
 app.post("/login", (req, res) => {
-  res.send("Welcome " + req.body.user + " you message is " + req.body.msg); // baca hasil imput dari html message & username
+  if(req.body.username == "admin" && req.body.password == "12345") {
+    res.send("Welcome " + req.body.username + " you message is " + req.body.password); // baca hasil imput dari html message & username
+  } else {
+    res.send("Wrong username or password");
+  }
 });
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: path.join(__dirname, "public") }); // ambil file dari directory dengan path
+  res.sendFile("login.html", { root: path.join(__dirname, "public") }); // ambil file dari directory dengan path
 });
 
 app.listen(port, () => {
